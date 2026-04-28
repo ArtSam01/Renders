@@ -520,7 +520,7 @@
       <div class="sc-icon" style="background:rgba(128,161,212,0.15)">⚡</div>
       <div class="sc-title">Action & Epic</div>
       <div class="sc-desc">Poses dinámicas, efectos de energía, fondos explosivos. Para juegos de acción o thumbnails de YouTube.</div>
-      <span class="sc-tag">Dynamic · boHype</span>
+      <span class="sc-tag">Dynamic · Hype</span>
     </div>
   </div>
 </div>
@@ -541,4 +541,109 @@
           <a href="https://www.fiverr.com/s/EgwoPke" target="_blank">Ordenar este estilo ↗</a>
         </div>
       </div>
-      <div class="p-
+      <div class="p-body">
+        <p class="p-style">Cute · Pastel · Dreamy</p>
+        <h3 class="p-title">Render Aesthetic</h3>
+        <p class="p-desc">Avatar femenino con estilo suave, iluminación cinematográfica, accesorios personalizados y fondo temático.</p>
+        <div class="p-footer">
+          <div class="p-price">Desde $5 <small>/ render</small></div>
+          <a href="https://www.fiverr.com/s/EgwoPke" class="p-btn" target="_blank">Ordenar ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-card reveal">
+      <div class="p-img-wrap">
+        <img src="/mnt/user-data/uploads/1000070821.png" alt="Thumbnail Dark Cinematic"/>
+        <span class="p-badge">Thumbnail</span>
+        <div class="p-hover-overlay">
+          <a href="http://www.fiverr.com/s/8zLp6g4" target="_blank">Ordenar este estilo ↗</a>
+        </div>
+      </div>
+      <div class="p-body">
+        <p class="p-style">Dark · Cinematic · Moody</p>
+        <h3 class="p-title">Thumbnail Cinematic</h3>
+        <p class="p-desc">Escena nocturna de interior, iluminación de estudio, personajes con actitud. Perfecto para YouTube y Roblox.</p>
+        <div class="p-footer">
+          <div class="p-price">Desde $5 <small>/ thumbnail</small></div>
+          <a href="http://www.fiverr.com/s/8zLp6g4" class="p-btn" style="background:var(--aqua);box-shadow:0 6px 20px rgba(117,201,200,0.3)" target="_blank">Ordenar ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="section" style="padding-top:0">
+  <div class="divider"></div>
+  <p class="s-label reveal">Por qué elegirnos</p>
+  <h2 class="s-title reveal">Calidad<br>garantizada</h2>
+  <p class="s-desc reveal" style="margin-bottom:40px">Cada cliente merece lo mejor — y eso es lo que entrego.</p>
+
+  <div class="why-row">
+    <div class="w-card reveal">
+      <span class="w-icon">⚡</span>
+      <div class="w-title">Entrega rápida</div>
+      <div class="w-text">Listo en menos de 48 horas, sin sacrificar ni un detalle.</div>
+    </div>
+    <div class="w-card reveal">
+      <span class="w-icon">🎨</span>
+      <div class="w-title">Cualquier estilo</div>
+      <div class="w-text">Cute, dark, fantasy, cozy, grunge — lo que imagines, lo hago.</div>
+    </div>
+    <div class="w-card reveal">
+      <span class="w-icon">✏️</span>
+      <div class="w-title">100% personalizado</div>
+      <div class="w-text">Tu avatar, tus colores, tu escena. Todo desde cero para ti.</div>
+    </div>
+    <div class="w-card reveal">
+      <span class="w-icon">💬</span>
+      <div class="w-title">Revisiones incluidas</div>
+      <div class="w-text">Si no te convence algo, lo ajusto hasta que quede perfecto.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section" style="padding-top:0">
+  <div class="cta-box reveal">
+    <h2>¿Listo para<br>destacar? ✦</h2>
+    <p>Elige el estilo que más te gusta y ordena tu render o thumbnail hoy mismo en Fiverr.</p>
+    <div class="cta-btns">
+      <a href="https://www.fiverr.com/s/EgwoPke" class="btn-a" target="_blank">Render Aesthetic ↗</a>
+      <a href="http://www.fiverr.com/s/8zLp6g4" class="btn-aqua" target="_blank">Thumbnail Cinematic ↗</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 · Renders & Thumbnails · Todos los estilos, toda la calidad ✦</p>
+</footer>
+
+<script>
+  // Cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove', e => {
+    mx=e.clientX; my=e.clientY;
+    cursor.style.left=(mx-5)+'px'; cursor.style.top=(my-5)+'px';
+  });
+  (function animRing(){
+    rx+=(mx-rx-17)*0.14; ry+=(my-ry-17)*0.14;
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(animRing);
+  })();
+  document.querySelectorAll('a').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cursor.style.transform='scale(2.5)';ring.style.width='50px';ring.style.height='50px';});
+    el.addEventListener('mouseleave',()=>{cursor.style.transform='scale(1)';ring.style.width='34px';ring.style.height='34px';});
+  });
+
+  // Scroll reveal
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach((e,i)=>{ if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*70); });
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>
